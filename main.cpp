@@ -1,9 +1,11 @@
 #include <iostream>
 #include <random>
+#include <vector>
 
 void multiply(int& a);
 void lower(std::string& s);
 double randamize(double b);
+void addele(std::vector<int>& c);
 
 
 int main(){
@@ -28,6 +30,10 @@ int main(){
     std::cout << random << std::endl;
     std::cout << randamizedNum << std::endl;
 
+    std::vector<int> v = {1,2,3};
+    for(int i:v) std::cout << i << std::endl;
+    addele(v);
+    for(int i:v) std::cout << i << std::endl;
 
     return 0;
 }
@@ -45,4 +51,10 @@ void lower(std::string& s){
        for (char& c : s) {
         c = std::tolower(static_cast<unsigned char>(c));
     }
+}
+
+void addele(std::vector<int>& c){
+    c.push_back(1);
+    c.push_back(1);
+    c.push_back(1);
 }
